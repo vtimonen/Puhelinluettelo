@@ -20,6 +20,9 @@ const App = () => {
         console.log('promise fulfilled')
         setPersons(response.data)
       })
+      .catch(error => {
+        console.log(error.response.data)
+      })
   }, [])
 
   const addName = (event) => {
@@ -56,6 +59,9 @@ const App = () => {
           setNotification(null)
         }, 5000)
       })
+      .catch(error => {
+        console.log(error.response.data)
+      })
   }
 
   const deletePerson = (id) => {
@@ -64,6 +70,9 @@ const App = () => {
         .exterminate(id)
         .then(() => {
           setPersons(persons.filter(p => p.id !== id))
+        })
+        .catch(error => {
+          console.log(error.response.data)
         })
     }
   }
