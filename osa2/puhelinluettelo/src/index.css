@@ -81,7 +81,7 @@ li:last-child {
 .success {
   background-color: #ecfdf5;
   color: green;
-  border: 2px solid red;
+  border: 2px solid green;
 }
 
 .error {
